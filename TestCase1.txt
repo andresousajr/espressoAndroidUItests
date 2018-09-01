@@ -1,0 +1,19 @@
+@RunWith(AndroidJUnit4.class)
+public class LoginActivityTest {
+
+  @Rule
+  public ActivityTestRule<LoginActivity>
+      mActivityRule = new ActivityTestRule<>(LoginActivity.class, false, true);
+}
+
+@Test
+public void quandoActivityIniciada_visualizarEstadoTela() {
+  onView(withId(R.id.login_image)).check(matches(isDisplayed()));
+  onView(withId(R.id.login_username)).check(matches(isDisplayed()));
+  onView(withId(R.id.login_password)).check(matches(isDisplayed()));
+  onView(withId(R.id.login_button)).check(matches(isDisplayed()));
+}
+
+
+
+
